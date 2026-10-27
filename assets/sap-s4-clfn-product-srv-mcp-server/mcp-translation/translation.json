@@ -1,0 +1,1253 @@
+{
+  "mcpTranslationVersion": "0.6",
+  "target": {
+    "ordId": "sap.s4:apiResource:API_CLFN_PRODUCT_SRV:v1",
+    "type": "openapi-v3"
+  },
+  "serverInfo": {
+    "name": "sap.mcp/product_master_data_including_classification_read",
+    "title": "product_master_data_including_classification_read",
+    "version": "1.0.0",
+    "description": "MCP server for the product_master_data_including_classification_read service."
+  },
+  "tools": [
+    {
+      "name": "GET_AClfnProduct",
+      "title": "GET_AClfnProduct",
+      "description": "Returns general data of product master.",
+      "openApiType": {
+        "path": "/A_ClfnProduct",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AClfnProduct__Product__",
+      "title": "GET_AClfnProduct__Product__",
+      "description": "Returns general data of a product master record by product number.",
+      "openApiType": {
+        "path": "/A_ClfnProduct('{Product}')",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Product Number",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AClfnProduct__Product___toDescription",
+      "title": "GET_AClfnProduct__Product___toDescription",
+      "description": "Returns description of product master record. Descriptions can be in different languages.",
+      "openApiType": {
+        "path": "/A_ClfnProduct('{Product}')/to_Description",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Product Number",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AClfnProduct__Product___toProductCharc",
+      "title": "GET_AClfnProduct__Product___toProductCharc",
+      "description": "Reads all characteristics assigned to a class that is used in product classification.",
+      "openApiType": {
+        "path": "/A_ClfnProduct('{Product}')/to_ProductCharc",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Product Number",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AClfnProduct__Product___toProductClass",
+      "title": "GET_AClfnProduct__Product___toProductClass",
+      "description": "Reads all classes assigned to products. You can also get classes of a selected product.",
+      "openApiType": {
+        "path": "/A_ClfnProduct('{Product}')/to_ProductClass",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Product Number",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AClfnClassForKeyDate",
+      "title": "GET_AClfnClassForKeyDate",
+      "description": "Reads all class header data. You can also retrieve the classes for a selected class type.",
+      "openApiType": {
+        "path": "/A_ClfnClassForKeyDate",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AClfnClassForKeyDate__ClassInternalID__",
+      "title": "GET_AClfnClassForKeyDate__ClassInternalID__",
+      "description": "Reads the header data of a class based on the internal ID.",
+      "openApiType": {
+        "path": "/A_ClfnClassForKeyDate('{ClassInternalID}')",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "ClassInternalID",
+            "description": "Internal Class Number",
+            "in": "path",
+            "newParameterName": "classinternalid"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AProductDescription",
+      "title": "GET_AProductDescription",
+      "description": "Returns description of product master record. Descriptions can be in different languages.",
+      "openApiType": {
+        "path": "/A_ProductDescription",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AProductDescription_Product__Product__Language__Language__",
+      "title": "GET_AProductDescription_Product__Product__Language__Language__",
+      "description": "Returns description of a product master record by product number and language.",
+      "openApiType": {
+        "path": "/A_ProductDescription(Product='{Product}',Language='{Language}')",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Product Number",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "Language",
+            "description": "Language Key",
+            "in": "path",
+            "newParameterName": "language"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AProductCharc",
+      "title": "GET_AProductCharc",
+      "description": "Reads all characteristics assigned to classes that are used in product classification.",
+      "openApiType": {
+        "path": "/A_ProductCharc",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AProductCharcValue",
+      "title": "GET_AProductCharcValue",
+      "description": "Reads all characteristic valuation used in product classification.",
+      "openApiType": {
+        "path": "/A_ProductCharcValue",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CharcValue_Product__Product__ClassType__ClassType__CharcInternal",
+      "title": "GET_AProductCharcValue_Product__Product__ClassType__ClassType__CharcInternalID__CharcInternalID__CharcValuePositionNumber__CharcValuePositionNumber__",
+      "description": "Reads a characteristic valuation using the product, the internal ID of the characteristic and the position number of the value.",
+      "openApiType": {
+        "path": "/A_ProductCharcValue(Product='{Product}',ClassType='{ClassType}',CharcInternalID='{CharcInternalID}',CharcValuePositionNumber='{CharcValuePositionNumber}')",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Key of Object to be Classified",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "ClassType",
+            "description": "Class Type",
+            "in": "path",
+            "newParameterName": "classtype"
+          },
+          {
+            "name": "CharcInternalID",
+            "description": "Characteristic Internal ID",
+            "in": "path",
+            "newParameterName": "charcinternalid"
+          },
+          {
+            "name": "CharcValuePositionNumber",
+            "description": "Characteristic value counter",
+            "in": "path",
+            "newParameterName": "charcvaluepositionnumber"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AProductClass",
+      "title": "GET_AProductClass",
+      "description": "Reads all classes assigned to products. You can also get classes of a selected product.",
+      "openApiType": {
+        "path": "/A_ProductClass",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Class_Product__Product__ClassInternalID__ClassInternalID__",
+      "title": "GET_AProductClass_Product__Product__ClassInternalID__ClassInternalID__",
+      "description": "Reads a product class assignment using the internal ID of the class and the product.",
+      "openApiType": {
+        "path": "/A_ProductClass(Product='{Product}',ClassInternalID='{ClassInternalID}')",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Key of Object to be Classified",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "ClassInternalID",
+            "description": "Internal Class Number",
+            "in": "path",
+            "newParameterName": "classinternalid"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Class_Product__Product__ClassInternalID__ClassInternalID___toCla",
+      "title": "GET_AProductClass_Product__Product__ClassInternalID__ClassInternalID___toClassDetails",
+      "description": "Reads the header data of the selected class.",
+      "openApiType": {
+        "path": "/A_ProductClass(Product='{Product}',ClassInternalID='{ClassInternalID}')/to_ClassDetails",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "Product",
+            "description": "Key of Object to be Classified",
+            "in": "path",
+            "newParameterName": "product"
+          },
+          {
+            "name": "ClassInternalID",
+            "description": "Internal Class Number",
+            "in": "path",
+            "newParameterName": "classinternalid"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET_AProductClassCharc",
+      "title": "GET_AProductClassCharc",
+      "description": "Reads all characteristics assigned to a class that is used in product classification.",
+      "openApiType": {
+        "path": "/A_ProductClassCharc",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "$top",
+            "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+            "in": "query",
+            "newParameterName": "top"
+          },
+          {
+            "name": "$skip",
+            "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "skip"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "in": "query",
+            "newParameterName": "filter"
+          },
+          {
+            "name": "$inlinecount",
+            "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+            "in": "query",
+            "newParameterName": "inlinecount"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "in": "query",
+            "newParameterName": "orderby"
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "in": "query",
+            "newParameterName": "select"
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
+            "in": "query",
+            "newParameterName": "expand"
+          }
+        ],
+        "requestBody": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          }
+        ]
+      }
+    }
+  ]
+}

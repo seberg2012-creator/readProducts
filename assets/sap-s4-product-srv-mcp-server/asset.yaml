@@ -1,0 +1,21 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: sap-s4-product-srv-mcp-server
+  description: Exposes SAP S/4HANA Product Master OData API operations as MCP tools for reading product descriptions, basic attributes, and plant data
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+requires:
+  - name: API_PRODUCT_SRV
+    kind: api
+    ordId: sap.s4:apiResource:API_PRODUCT_SRV:v1
+
+provides:
+  apis:
+    - name: sap-s4-product-srv-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:product-master-data-6c136.sap-s4-product-srv-mcp-server:v1
