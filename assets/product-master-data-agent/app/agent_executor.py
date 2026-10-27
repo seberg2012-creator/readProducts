@@ -4,7 +4,7 @@ from typing import Any
 
 from langchain_core.messages import SystemMessage
 from langchain_core.messages.utils import count_tokens_approximately
-from langchain_core.tools import BaseTool
+from langchain_core.tools import BaseTool, StructuredTool
 
 from a2a.server.agent_execution import AgentExecutor as A2AAgentExecutor, RequestContext
 from a2a.server.events import EventQueue
@@ -60,28 +60,21 @@ def _truncate_tool_output(raw: Any) -> str:
     return truncated + notice
 
 
-class _TruncatingToolWrapper(BaseTool):
-    """Thin wrapper that passes through all tool calls but caps the output size."""
+def _make_truncating_wrapper(inner: BaseTool) -> BaseTool:
+    """Return a StructuredTool that proxies *inner* and caps its output size."""
+    def _run_fn(*args: Any, **kwargs: Any) -> str:
+        return _truncate_tool_output(inner._run(*args, **kwargs))
 
-    name: str
-    description: str
-    _inner: BaseTool
+    async def _arun_fn(*args: Any, **kwargs: Any) -> str:
+        return _truncate_tool_output(await inner._arun(*args, **kwargs))
 
-    def __init__(self, inner: BaseTool):
-        super().__init__(name=inner.name, description=inner.description)
-        object.__setattr__(self, "_inner", inner)
-
-    @property
-    def args_schema(self):  # type: ignore[override]
-        return self._inner.args_schema
-
-    def _run(self, *args: Any, **kwargs: Any) -> str:
-        result = self._inner._run(*args, **kwargs)
-        return _truncate_tool_output(result)
-
-    async def _arun(self, *args: Any, **kwargs: Any) -> str:
-        result = await self._inner._arun(*args, **kwargs)
-        return _truncate_tool_output(result)
+    return StructuredTool(
+        name=inner.name,
+        description=inner.description,
+        args_schema=inner.args_schema,
+        func=_run_fn,
+        coroutine=_arun_fn,
+    )
 
 
 class AgentExecutor(A2AAgentExecutor):
@@ -121,7 +114,7 @@ class AgentExecutor(A2AAgentExecutor):
         tools = [*tools, *self.skill_tools]
 
         # Wrap all tools: first truncate oversized OData responses, then scan for injection
-        tools = [_TruncatingToolWrapper(wrap_tool(t)) for t in tools]
+        tools = [_make_truncating_wrapper(wrap_tool(t)) for t in tools]
 
         from agent import get_system_prompt
         _system_prompt = get_system_prompt()
